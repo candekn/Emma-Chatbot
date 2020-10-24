@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,10 +21,23 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
-	    <script src="https://prueba-emma.herokuapp.com/assets/modules/channel-web/inject.js"></script>
-    <script>
-        window.botpressWebChat.init({ host: 'https://prueba-emma.herokuapp.com', botId: 'emma1-0' })
+    <script src="https://prueba-emma.herokuapp.com/assets/modules/channel-web/inject.js"></script>
+    <script type="text/javascript">
+        window.botpressWebChat.init({
+            host: 'https://prueba-emma.herokuapp.com',
+            botId: 'emma-1',
+            hideWidget: true/*,
+            containerWidth: '100%',
+            layoutWidth: '100%'*/
+        });
+    </script>
+    <script type="text/javascript">
+        function openBp(ob) {
+            window.botpressWebChat.sendEvent({ type: 'toggle' });
+            window.botpressWebChat.sendEvent({ type: 'message', text: '¡Hola!' });
+        }
     </script>
 </body>
 

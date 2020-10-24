@@ -1,5 +1,7 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Emma</a>
+﻿@inject IJSRuntime JSRuntime;
+
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand text-center" href="">Emma Logo</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,24 +9,24 @@
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Emma
+        <li class="nav-item px-3" @onclick="AbrirBp" >
+            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All" >
+                <span class="oi oi-chat" id="show-bp" aria-hidden="true"  ></span> Emma
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="guias-digitales">
-                <span class="oi oi-plus" aria-hidden="true"></span> Guias Digitales
+                <span class="oi oi-bookmark" aria-hidden="true"></span> Guias Digitales
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="folletos">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Folletos
+                <span class="oi oi-book" aria-hidden="true"></span> Folletos
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="denuncia">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Denuncia
+                <span class="oi oi-warning" aria-hidden="true"></span> Denuncia
             </NavLink>
         </li>
     </ul>
@@ -39,4 +41,11 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+
+    async Task AbrirBp()
+    {
+        await JSRuntime.InvokeVoidAsync("openBp");
+    }
+
+    //@onclick="AbrirBp"
 }
