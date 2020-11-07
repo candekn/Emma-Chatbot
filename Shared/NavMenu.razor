@@ -1,7 +1,7 @@
 ﻿@inject IJSRuntime JSRuntime;
 
 <div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand text-center" href="">Emma Logo</a>
+    <a id="alogo" class="alogo navbar-brand text-center"  href="/" ><img src="img/logo_emma_transparente.png"></a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,24 +9,34 @@
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
-        <li class="nav-item px-3" @onclick="AbrirBp" >
-            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All" >
-                <span class="oi oi-chat" id="show-bp" aria-hidden="true"  ></span> Emma
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="que_es_grooming">
+                <span class="fas fa-mask" aria-hidden="true" style="margin-right:13px"></span> ¿Qué es Grooming?
+            </NavLink>
+        </li>
+        <li class="nav-item px-3" @onclick="AbrirBp">
+            <NavLink class="nav-link" href="ayuda">
+                <span class="oi oi-chat" id="show-bp" aria-hidden="true"></span> ¿Necesitás Ayuda?
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="guias-digitales">
-                <span class="oi oi-bookmark" aria-hidden="true"></span> Guias Digitales
+            <NavLink class="nav-link" href="guias_digitales">
+                <span class="oi oi-data-transfer-download" aria-hidden="true"></span> Guías Digitales
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="folletos">
-                <span class="oi oi-book" aria-hidden="true"></span> Folletos
+            <NavLink class="nav-link" href="noticias">
+                <span class="oi oi-browser" aria-hidden="true"></span> Noticias
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="denuncia">
-                <span class="oi oi-warning" aria-hidden="true"></span> Denuncia
+                <span class="oi oi-warning" aria-hidden="true"></span> ¿Cómo Denunciar?
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="nosotros">
+                <span class="oi oi-people" aria-hidden="true"></span> Conocenos
             </NavLink>
         </li>
     </ul>

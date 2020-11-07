@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Emma</title>
     <base href="/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="_content/Blazorise/blazorise.css" rel="stylesheet" />
+    <link href="_content/Blazorise.Bootstrap/blazorise.bootstrap.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
 </head>
@@ -16,12 +19,19 @@
     <app>Loading...</app>
 
     <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
+        Ha ocurrido un error.
+        <a href="" class="reload">Recargar</a>
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="_content/Blazorise/blazorise.js"></script>
+    <script src="_content/Blazorise.Bootstrap/blazorise.bootstrap.js"></script>
+
     <script>navigator.serviceWorker.register('service-worker.js');</script>
     <script src="https://prueba-emma.herokuapp.com/assets/modules/channel-web/inject.js"></script>
     <script type="text/javascript">
@@ -29,8 +39,8 @@
             host: 'https://prueba-emma.herokuapp.com',
             botId: 'emma-1',
             hideWidget: true/*,
-            containerWidth: '100%',
-            layoutWidth: '100%'*/
+                                            containerWidth: '100%',
+                                            layoutWidth: '100%'*/
         });
     </script>
     <script type="text/javascript">

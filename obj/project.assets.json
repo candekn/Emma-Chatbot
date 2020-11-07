@@ -2,6 +2,66 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "Blazorise/0.9.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazorise.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Bootstrap/0.9.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.1.2",
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazorise.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazorise.Bootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Bootstrap.props": {}
+        }
+      },
+      "Blazorise.Icons.FontAwesome/0.9.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.1.2",
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazorise.Icons.FontAwesome.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazorise.Icons.FontAwesome.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.6": {
         "type": "package",
         "dependencies": {
@@ -359,13 +419,13 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
-      "System.Net.Http.Json/3.2.0": {
+      "System.Net.Http.Json/3.2.1": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.3",
-          "System.Text.Json": "4.7.1",
-          "System.Threading.Tasks.Extensions": "4.5.2"
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Text.Json": "4.7.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
           "lib/netstandard2.0/System.Net.Http.Json.dll": {}
@@ -434,6 +494,62 @@
     }
   },
   "libraries": {
+    "Blazorise/0.9.1.2": {
+      "sha512": "RBg7J6rIUF3bzbt8/L7wsU9NCmW7p0nQ4RZ2F9Fc0sz6y3KnMnBHHU4GQaQnuGcH4OcWDDIrZEQl/5WXNPjraA==",
+      "type": "package",
+      "path": "blazorise/0.9.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.0.9.1.2.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "content/compilerconfig.json",
+        "contentFiles/any/netstandard2.1/compilerconfig.json",
+        "lib/netstandard2.1/Blazorise.dll",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.js"
+      ]
+    },
+    "Blazorise.Bootstrap/0.9.1.2": {
+      "sha512": "RyAs6D1bm3tDqfLqX8BEyuNvu0P8HWpws2Oizet/3V70poBR1CSjUUpA+nqlBkk2GKfQFFB8hOBaNeI6gl06WQ==",
+      "type": "package",
+      "path": "blazorise.bootstrap/0.9.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.bootstrap.0.9.1.2.nupkg.sha512",
+        "blazorise.bootstrap.nuspec",
+        "build/Blazorise.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.Bootstrap.props",
+        "buildTransitive/Blazorise.Bootstrap.props",
+        "lib/netstandard2.1/Blazorise.Bootstrap.dll",
+        "staticwebassets/blazorise.bootstrap.css",
+        "staticwebassets/blazorise.bootstrap.js"
+      ]
+    },
+    "Blazorise.Icons.FontAwesome/0.9.1.2": {
+      "sha512": "guN/PhenRzAcBRKVT3yQ/RxltkJ+CePsvPgXXua48UtJjC/N4srPVpwaLtD3wxTuCiIEpEGrEJNoP4ynU1QjvQ==",
+      "type": "package",
+      "path": "blazorise.icons.fontawesome/0.9.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.icons.fontawesome.0.9.1.2.nupkg.sha512",
+        "blazorise.icons.fontawesome.nuspec",
+        "lib/netstandard2.1/Blazorise.Icons.FontAwesome.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/3.1.6": {
       "sha512": "n0EC0W8jRpM2o1sKKYQpFuvE1sgW7juyEbhVZPcHy9VnHyZYvcIBHVJ6aPCtwqf/16KyqIB1XDVjPnPgyui47Q==",
       "type": "package",
@@ -1447,10 +1563,10 @@
         "version.txt"
       ]
     },
-    "System.Net.Http.Json/3.2.0": {
-      "sha512": "6VUCQKGS9A0RGkIIfLpvAbBOQdTgsffQJ0OOanEMuCC/couJtjRhK65/3kE97IYi6z5kvXYvQW4buZ2rH5zsDA==",
+    "System.Net.Http.Json/3.2.1": {
+      "sha512": "KkevRTwX9uMYxuxG2/wSql8FIAItB89XT36zoh6hraQkFhf2yjotDswpAKzeuaEuMhAia6c50oZMkP1PJoYufQ==",
       "type": "package",
-      "path": "system.net.http.json/3.2.0",
+      "path": "system.net.http.json/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1461,7 +1577,7 @@
         "lib/net461/System.Net.Http.Json.xml",
         "lib/netstandard2.0/System.Net.Http.Json.dll",
         "lib/netstandard2.0/System.Net.Http.Json.xml",
-        "system.net.http.json.3.2.0.nupkg.sha512",
+        "system.net.http.json.3.2.1.nupkg.sha512",
         "system.net.http.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1630,30 +1746,34 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "Blazorise.Bootstrap >= 0.9.1.2",
+      "Blazorise.Icons.FontAwesome >= 0.9.1.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.1",
-      "System.Net.Http.Json >= 3.2.0"
+      "System.Net.Http.Json >= 3.2.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Cande\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Emma\\Emma\\Emma.csproj",
+      "projectUniqueName": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
       "projectName": "Emma",
-      "projectPath": "D:\\Emma\\Emma\\Emma.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Emma\\Emma\\obj\\",
+      "projectPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
+      "packagesPath": "C:\\Users\\Cande\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Cande\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1678,6 +1798,14 @@
     "frameworks": {
       "netstandard2.1": {
         "dependencies": {
+          "Blazorise.Bootstrap": {
+            "target": "Package",
+            "version": "[0.9.1.2, )"
+          },
+          "Blazorise.Icons.FontAwesome": {
+            "target": "Package",
+            "version": "[0.9.1.2, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[3.2.1, )"
@@ -1694,7 +1822,7 @@
           },
           "System.Net.Http.Json": {
             "target": "Package",
-            "version": "[3.2.0, )"
+            "version": "[3.2.1, )"
           }
         },
         "imports": [

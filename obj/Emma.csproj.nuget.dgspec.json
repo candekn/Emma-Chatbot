@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Emma\\Emma\\Emma.csproj": {}
+    "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj": {}
   },
   "projects": {
-    "D:\\Emma\\Emma\\Emma.csproj": {
+    "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Emma\\Emma\\Emma.csproj",
+        "projectUniqueName": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
         "projectName": "Emma",
-        "projectPath": "D:\\Emma\\Emma\\Emma.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Emma\\Emma\\obj\\",
+        "projectPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
+        "packagesPath": "C:\\Users\\Cande\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -42,6 +43,14 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[0.9.1.2, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[0.9.1.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[3.2.1, )"
@@ -58,7 +67,7 @@
             },
             "System.Net.Http.Json": {
               "target": "Package",
-              "version": "[3.2.0, )"
+              "version": "[3.2.1, )"
             }
           },
           "imports": [
