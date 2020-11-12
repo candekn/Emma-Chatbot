@@ -1,125 +1,98 @@
 ﻿@page "/guias_digitales"
-    
+@inject HttpClient Http
         <!--!-->
-        <!--!--><!--!-->
-        <div class="container">
-            <h1 class="tituloSeccion mb-4 p-4">Guías Digitales</h1>
-            <div class="row">
-                <div class="col mb-2">
-                    <button type="button" class="btn btn-dark mr-2  mb-3">TODOS</button>
-                    <button type="button" class="btn btn-primary mr-2  mb-3">Niñas y Niños</button>
-                    <button type="button" class="btn btn-secondary mr-2  mb-3">Adolescentes</button>
-                    <button type="button" class="btn btn-danger mr-2  mb-3">Padres</button>
-                    <button type="button" class="btn btn-warning mr-2  mb-3">Docentes</button>
-                </div>
+<!--!--><!--!-->
+<div class="container">
+    <h1 class="tituloSeccion mb-4 p-4">Guías Digitales</h1>
+    @if (categorias == null)
+    {
+        <LoadingLayout />
+    }
+    else
+    {
+        <div class="row">
+            <div class="col mb-2">
+                <button type="button" class="btn btn-dark mr-2  mb-3">TODOS</button>
+                @foreach (var categoria in categorias)
+                {
+                    <button type="button" @onclick="(()=>Filtrar(categoria.id_categoria_guia))" class="btn btn-@categoria.estilo mr-2  mb-3">@categoria.nombre</button>
+                }
             </div>
-
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
-                <div class="col-auto d-none d-sm-block ">
-                    <img src="img/facebook.png" />
-                </div>
-                <div class="col-sm-12 d-block d-sm-none">
-                    <img src="img/facebook.png" style="width:100%" />
-                </div>
-                <div class="col p-2 d-flex flex-column position-static">
-                    <div class="card-body">
-                        <h3># Guía Facebook</h3>
-                        <div class="row">
-                            <div class="col mb-3">
-                                <button type="button" class="btn btn-danger mr-2">Padres</button>
-                                <button type="button" class="btn btn-warning mr-2">Docentes</button>
-                            </div>
-                        </div>
-                        <h5 class="card-title"><span class="oi oi-calendar"></span> 28/10/2020</h5>
-                        <p class="card-text">Guía de Configuración de Privacidad en Facebook. Mantener privada la información de las redes sociales, sobre todo en las cuentas que utilizan menores.</p>
-                        <a href="descargas/LeyMicaOrtega.pdf" target="_blank" download="Ley Mica Ortega" class="btn btn-primary">Descargar PDF <span class="oi oi-data-transfer-download"></span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
-                <div class="col-auto d-none d-sm-block ">
-                    <img src="img/leyMicaOrtega.png" />
-                </div>
-                <div class="col-sm-12 d-block d-sm-none">
-                    <img src="img/leyMicaOrtega.png" style="width:100%" />
-                </div>
-                <div class="col p-2 d-flex flex-column position-static">
-                    <div class="card-body">
-                        <h3>Ley # Mica Ortega</h3>
-                        <div class="row">
-                            <div class="col mb-3">
-                                <button type="button" class="btn btn-danger mr-2">Padres</button>
-                                <button type="button" class="btn btn-warning mr-2">Docentes</button>
-                            </div>
-                        </div>
-                        <h5 class="card-title"><span class="oi oi-calendar"></span> 28/10/2020</h5>
-                        <p class="card-text">
-                            CAMPAÑA NACIONAL PERMANENTE DE
-                            CONCIENTIZACION Y PREVENCIÓN DEL
-                            GROOMING EN ARGENTINA.
-                        </p>
-                        <a href="descargas/LeyMicaOrtega.pdf" target="_blank" download="Ley Mica Ortega" class="btn btn-primary">Descargar PDF <span class="oi oi-data-transfer-download"></span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
-                <div class="col-auto d-none d-sm-block ">
-                    <img src="img/facebook.png" />
-                </div>
-                <div class="col-sm-12 d-block d-sm-none">
-                    <img src="img/facebook.png" style="width:100%" />
-                </div>
-                <div class="col p-2 d-flex flex-column position-static">
-                    <div class="card-body">
-                        <h3># Guía Facebook</h3>
-                        <div class="row">
-                            <div class="col mb-3">
-                                <button type="button" class="btn btn-danger mr-2">Padres</button>
-                                <button type="button" class="btn btn-warning mr-2">Docentes</button>
-                            </div>
-                        </div>
-                        <h5 class="card-title"><span class="oi oi-calendar"></span> 28/10/2020</h5>
-                        <p class="card-text">Guía de Configuración de Privacidad en Facebook. Mantener privada la información de las redes sociales, sobre todo en las cuentas que utilizan menores.</p>
-                        <a href="descargas/LeyMicaOrtega.pdf" target="_blank" download="Ley Mica Ortega" class="btn btn-primary">Descargar PDF <span class="oi oi-data-transfer-download"></span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
-                <div class="col-auto d-none d-sm-block ">
-                    <img src="img/leyMicaOrtega.png" />
-                </div>
-                <div class="col-sm-12 d-block d-sm-none">
-                    <img src="img/leyMicaOrtega.png" style="width:100%" />
-                </div>
-                <div class="col p-2 d-flex flex-column position-static">
-                    <div class="card-body">
-                        <h3>Ley # Mica Ortega</h3>
-                        <div class="row">
-                            <div class="col mb-3">
-                                <button type="button" class="btn btn-danger mr-2">Padres</button>
-                                <button type="button" class="btn btn-warning mr-2">Docentes</button>
-                            </div>
-                        </div>
-                        <h5 class="card-title"><span class="oi oi-calendar"></span> 28/10/2020</h5>
-                        <p class="card-text">
-                            CAMPAÑA NACIONAL PERMANENTE DE
-                            CONCIENTIZACION Y PREVENCIÓN DEL
-                            GROOMING EN ARGENTINA.
-                        </p>
-                        <a href="descargas/LeyMicaOrtega.pdf" target="_blank" download="Ley Mica Ortega" class="btn btn-primary">Descargar PDF <span class="oi oi-data-transfer-download"></span></a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- comienzan tarjetas-->
-            <!-- fin tarjetas tarjetas-->
         </div>
-
-        @code {
+        @if (guias == null)
+        {
+            <LoadingLayout />
+        }
+        else
+        {
+            @foreach (var guia in guias)
+            {
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+                    <div class="col-auto d-none d-sm-block ">
+                        <img src="@guia.imagen" />
+                    </div>
+                    <div class="col-sm-12 d-block d-sm-none">
+                        <img src="@guia.imagen" style="width:100%" />
+                    </div>
+                    <div class="col p-2 d-flex flex-column position-static">
+                        <div class="card-body">
+                            <h3>@guia.titulo</h3>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <button type="button" class="btn btn-danger mr-2">Padres</button>
+                                    <button type="button" class="btn btn-warning mr-2">Docentes</button>
+                                </div>
+                            </div>
+                            <h5 class="card-title"><span class="oi oi-calendar"></span> @guia.fecha.ToShortDateString()</h5>
+                            <p class="card-text">@guia.descripcion</p>
+                            <a href="@guia.link" target="_blank" download="Ley Mica Ortega" class="btn btn-primary">Descargar PDF <span class="oi oi-data-transfer-download"></span></a>
+                        </div>
+                    </div>
+                </div>
+            }
 
         }
+    }
+</div>
+
+@code {
+    private GuiaDigital[] guias;
+    private CategoriaDeGuias[] categorias;
+    protected override async Task OnInitializedAsync()
+    {
+        guias = await Http.GetFromJsonAsync<GuiaDigital[]>("http://localhost:8082/GuiasDigitales/obtenerTodasLasGuias");
+        categorias = await Http.GetFromJsonAsync<CategoriaDeGuias[]>("http://localhost:8082/GuiasDigitales/obtenerCategoriasDeGuias");
+    }
+
+    public class GuiaDigital
+    {
+        public int id_guia { get; set; }
+        public string titulo { get; set; }
+        public string hashtag { get; set; }
+        public string descripcion { get; set; }
+        public string link { get; set; }
+        public string imagen { get; set; }
+        public int id_categoria_guia { get; set; }
+        public DateTime fecha { get; set; }
+    }
+
+    public class CategoriaDeGuias
+    {
+        public int id_categoria_guia { get; set; }
+        public string nombre { get; set; }
+        public string estilo { get; set; }
+    }
+
+    public void Filtrar(int id)
+    {
+         FiltroCategoria(id);
+    }
+
+    async Task FiltroCategoria(int id)
+    {
+        string url = "http://localhost:8082/GuiasDigitales/obtenerGuiasPorCategoria/" + id;
+        guias = await Http.GetFromJsonAsync<GuiaDigital[]>(url);
+    }
+
+
+}
