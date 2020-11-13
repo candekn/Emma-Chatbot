@@ -48,6 +48,20 @@
           "buildMultiTargeting/Blazorise.Bootstrap.props": {}
         }
       },
+      "Blazorise.Components/0.9.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.1.2",
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazorise.Components.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazorise.Components.dll": {}
+        }
+      },
       "Blazorise.Icons.FontAwesome/0.9.1.2": {
         "type": "package",
         "dependencies": {
@@ -534,6 +548,20 @@
         "lib/netstandard2.1/Blazorise.Bootstrap.dll",
         "staticwebassets/blazorise.bootstrap.css",
         "staticwebassets/blazorise.bootstrap.js"
+      ]
+    },
+    "Blazorise.Components/0.9.1.2": {
+      "sha512": "mAE6tTmJrs/Iw5cH0/TGrGzZ2+qQy/e8wcMZT1chsxvZ86qbxp44bLgRcjlv+QHz1/Nc4RF2yNVwtVbyp0CmfQ==",
+      "type": "package",
+      "path": "blazorise.components/0.9.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.components.0.9.1.2.nupkg.sha512",
+        "blazorise.components.nuspec",
+        "lib/netstandard2.1/Blazorise.Components.dll"
       ]
     },
     "Blazorise.Icons.FontAwesome/0.9.1.2": {
@@ -1747,6 +1775,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Blazorise.Bootstrap >= 0.9.1.2",
+      "Blazorise.Components >= 0.9.1.2",
       "Blazorise.Icons.FontAwesome >= 0.9.1.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.1",
@@ -1755,27 +1784,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cande\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\romin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
+      "projectUniqueName": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj",
       "projectName": "Emma",
-      "projectPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
-      "packagesPath": "C:\\Users\\Cande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\obj\\",
+      "projectPath": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj",
+      "packagesPath": "C:\\Users\\romin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Cande\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\romin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -1799,6 +1825,10 @@
       "netstandard2.1": {
         "dependencies": {
           "Blazorise.Bootstrap": {
+            "target": "Package",
+            "version": "[0.9.1.2, )"
+          },
+          "Blazorise.Components": {
             "target": "Package",
             "version": "[0.9.1.2, )"
           },

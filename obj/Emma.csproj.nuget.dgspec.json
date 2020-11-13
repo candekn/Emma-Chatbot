@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj": {}
+    "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj": {
+    "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
+        "projectUniqueName": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj",
         "projectName": "Emma",
-        "projectPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\Emma.csproj",
-        "packagesPath": "C:\\Users\\Cande\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cande\\Documents\\Cande\\UnLaM\\Materias en Curso\\Unlam\\TPI\\Repo\\Proyecto Emma\\obj\\",
+        "projectPath": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\Emma.csproj",
+        "packagesPath": "C:\\Users\\romin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\romin\\Source\\Repos\\Emma-ChatbotNuevo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Cande\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\romin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -44,6 +42,10 @@
         "netstandard2.1": {
           "dependencies": {
             "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[0.9.1.2, )"
+            },
+            "Blazorise.Components": {
               "target": "Package",
               "version": "[0.9.1.2, )"
             },
