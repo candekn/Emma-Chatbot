@@ -1,7 +1,6 @@
 ﻿@page "/guias_digitales"
 @inject HttpClient Http
-        <!--!-->
-<!--!--><!--!-->
+
 <div class="container">
     <h1 class="tituloSeccion mb-4 p-4">Guías Digitales</h1>
     @if (categorias == null)
@@ -58,10 +57,11 @@
 @code {
     private GuiaDigital[] guias;
     private CategoriaDeGuias[] categorias;
+    private string url = Environment.GetEnvironmentVariable("EmmaAPI");
     protected override async Task OnInitializedAsync()
     {
-        guias = await Http.GetFromJsonAsync<GuiaDigital[]>("http://localhost:8082/GuiasDigitales/obtenerTodasLasGuias");
-        categorias = await Http.GetFromJsonAsync<CategoriaDeGuias[]>("http://localhost:8082/GuiasDigitales/obtenerCategoriasDeGuias");
+        guias = await Http.GetFromJsonAsync<GuiaDigital[]>(url+"/GuiasDigitales/obtenerTodasLasGuias");
+        categorias = await Http.GetFromJsonAsync<CategoriaDeGuias[]>(url + "/GuiasDigitales/obtenerCategoriasDeGuias");
     }
 
     public class GuiaDigital
@@ -85,14 +85,13 @@
 
     public void Filtrar(int id)
     {
-         FiltroCategoria(id);
+        FiltroCategoria(id);
     }
 
-    async Task FiltroCategoria(int id)
+    async void FiltroCategoria(int id)
     {
-        string url = "http://localhost:8082/GuiasDigitales/obtenerGuiasPorCategoria/" + id;
-        guias = await Http.GetFromJsonAsync<GuiaDigital[]>(url);
+        string urlfiltro = url + "/GuiasDigitales/obtenerGuiasPorCategoria/" + id.ToString();
+        guias = await Http.GetFromJsonAsync<GuiaDigital[]>(urlfiltro);
     }
-
-
+    
 }
